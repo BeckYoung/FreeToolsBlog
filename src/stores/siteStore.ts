@@ -281,14 +281,14 @@ function applySiteMeta(config: SiteConfig) {
   setMeta('twitter:card', 'summary_large_image');
 
   const origin = typeof window !== 'undefined' ? window.location.origin : '';
-  const shareImage = config.shareImage || config.logo || `${origin}/logo.png`;
+  const shareImage = config.shareImage || config.logo || `${origin}/freelog.svg`;
   if (shareImage) {
     const absoluteImage = shareImage.startsWith('http') || shareImage.startsWith('data:') ? shareImage : `${origin}${shareImage.startsWith('/') ? '' : '/'}${shareImage}`;
     setMeta('og:image', absoluteImage);
     setMeta('twitter:image', absoluteImage);
   }
 
-  const faviconUrl = config.favicon || '/logo.png';
+  const faviconUrl = config.favicon || '/freelog.svg';
   let link = document.querySelector('link[rel*="icon"]') as HTMLLinkElement | null;
   if (!link) {
     link = document.createElement('link');

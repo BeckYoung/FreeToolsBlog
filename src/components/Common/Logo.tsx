@@ -7,7 +7,7 @@ interface LogoProps {
 
 export function Logo({ collapsed = false }: LogoProps) {
   const { config } = useSiteStore();
-  const logoUrl = config.logo || '/logo.png';
+  const logoUrl = config.logo || '/freelog.svg';
   const siteName = config.siteName || 'XinBlog';
 
   return (

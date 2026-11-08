@@ -3,7 +3,7 @@
   "include": ["/*"],
   "exclude": [
     "/assets/*",
-    "/logo.png",
+    "/freelog.svg",
     "/favicon.ico",
     "/*.js",
     "/*.css",

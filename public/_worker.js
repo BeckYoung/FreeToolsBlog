@@ -882,9 +882,9 @@ function injectSiteMeta(html, config, requestUrl) {
   const themeColor = escapeHtmlMeta(config.pwaThemeColor || '#ffffff');
   const origin = new URL(requestUrl).origin;
 
-  let image = config.shareImage || config.logo || '/logo.png';
+  let image = config.shareImage || config.logo || '/freelog.svg';
   if (image.startsWith('data:')) {
-    image = '/logo.png';
+    image = '/freelog.svg';
   }
   if (image && !image.startsWith('http')) {
     image = origin + (image.startsWith('/') ? '' : '/') + image;
@@ -923,7 +923,7 @@ async function getManifest(env, requestUrl) {
     const name = config.siteName || 'XinBlog';
     const shortName = name.length > 12 ? `${name.slice(0, 11)}…` : name;
 
-    let iconSrc = config.logo || config.favicon || '/logo.png';
+    let iconSrc = config.logo || config.favicon || '/freelog.svg';
     if (iconSrc && !iconSrc.startsWith('http') && !iconSrc.startsWith('data:')) {
       iconSrc = origin + (iconSrc.startsWith('/') ? '' : '/') + iconSrc;
     }

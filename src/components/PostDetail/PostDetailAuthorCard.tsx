@@ -48,7 +48,7 @@ export function PostDetailAuthorCard() {
       >
         <Box
           component="img"
-          src={avatar || '/logo.png'}
+          src={avatar || '/freelog.svg'}
           alt={authorName}
           sx={{
             width: '100%',
