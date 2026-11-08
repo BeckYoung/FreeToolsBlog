@@ -265,7 +265,7 @@ export function ThemePanel({ editor }: { editor: AppearanceEditor }) {
               fontWeight: 600,
             }}
           >
-            标签样式
+            分类样式
           </Box>
 
           <Box

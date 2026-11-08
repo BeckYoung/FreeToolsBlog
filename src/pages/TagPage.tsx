@@ -79,7 +79,7 @@ export function TagPage() {
       <Fade in timeout={400}>
         <Container maxWidth="lg" sx={{ py: { xs: 4, md: 6 }, pb: 8 }}>
           <Typography variant="h3" component="h1" sx={{ fontWeight: 800, mb: 1, fontSize: { xs: '2rem', sm: '2.5rem', md: '3rem' } }}>
-            标签
+            分类
           </Typography>
 
           <Typography variant="body1" color="text.secondary" sx={{ mb: 4, fontSize: { xs: '0.875rem', sm: '1rem' } }}>
@@ -209,7 +209,7 @@ export function TagPage() {
             </Fade>
 
           )}
-        <AdminFrameFab adminPath="/admin/tags?embed=1" label="管理标签" icon={<LabelIcon />} />
+        <AdminFrameFab adminPath="/admin/tags?embed=1" label="管理分类" icon={<LabelIcon />} />
         </Container>
 
       </Fade>
@@ -254,7 +254,7 @@ export function TagPage() {
                   }}
                 />
                 <Typography variant="h3" component="h1" sx={{ fontWeight: 800, mb: 1, fontSize: { xs: '1.75rem', sm: '2.5rem', md: '3rem' }, overflowWrap: 'break-word' }}>
-                  标签：{tag.name}
+                  分类：{tag.name}
                 </Typography>
 
                 <Typography variant="body1" color="text.secondary" sx={{ fontSize: { xs: '0.875rem', sm: '1rem' } }}>
@@ -337,7 +337,7 @@ export function TagPage() {
             </Fade>
 
           )}
-        <AdminFrameFab adminPath="/admin/tags?embed=1" label="管理标签" icon={<LabelIcon />} />
+        <AdminFrameFab adminPath="/admin/tags?embed=1" label="管理分类" icon={<LabelIcon />} />
         </Container>
 
       </Fade>

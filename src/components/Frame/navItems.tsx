@@ -21,7 +21,7 @@ export interface BuiltinNavItem {
 
 export const builtinNavItems: BuiltinNavItem[] = [
   { id: 'nav-home', title: '首页', path: '/', icon: <Home fontSize="small" /> },
-  { id: 'nav-tags', title: '标签', path: '/tag/all', icon: <LocalOffer fontSize="small" /> },
+  { id: 'nav-tags', title: '分类', path: '/tag/all', icon: <LocalOffer fontSize="small" /> },
   { id: 'nav-message-wall', title: '留言墙', path: '/message-wall', icon: <Forum fontSize="small" /> },
   { id: 'nav-chat', title: '聊天室', path: '/chat', icon: <ChatBubble fontSize="small" /> },
   { id: 'nav-friends', title: '友链', path: '/friends', icon: <People fontSize="small" /> },

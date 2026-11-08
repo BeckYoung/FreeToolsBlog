@@ -28,6 +28,9 @@ compile.log
 .env.*
 !.env.example
 
+# 本地开发态 Mock API 数据（仅本机有效，勿提交）
+.local-dev-api/
+
 # 依赖缓存 / 测试覆盖率
 .cache
 coverage

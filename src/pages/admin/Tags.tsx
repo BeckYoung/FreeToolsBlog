@@ -113,7 +113,7 @@ export function AdminTags() {
 
   const handleSave = async () => {
     if (!form.name.trim()) {
-      setFormError('标签名必填');
+      setFormError('分类名必填');
       return;
     }
     setFormError('');
@@ -140,7 +140,7 @@ export function AdminTags() {
       return;
     }
 
-    enqueueSnackbar(editingId ? '标签已更新' : '标签已创建', { variant: 'success' });
+    enqueueSnackbar(editingId ? '分类已更新' : '分类已创建', { variant: 'success' });
     setOpen(false);
     await loadTags();
   };
@@ -153,7 +153,7 @@ export function AdminTags() {
     if (result.msg) {
       enqueueSnackbar(result.msg, { variant: 'error' });
     } else {
-      enqueueSnackbar('标签已删除', { variant: 'success' });
+      enqueueSnackbar('分类已删除', { variant: 'success' });
     }
     setDeleteId(null);
     await loadTags();
@@ -165,11 +165,11 @@ export function AdminTags() {
       <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', mb: 3, gap: 2, minWidth: 0 }}>
         <Box sx={{ minWidth: 0 }}>
           <Typography variant="h5" sx={{ fontWeight: 700, overflowWrap: 'break-word' }}>
-            标签管理
+            分类管理
           </Typography>
 
           <Typography variant="body2" color="text.secondary" sx={{ overflowWrap: 'break-word' }}>
-            管理文章标签，便于分类和检索
+            管理文章分类，便于归类和检索
           </Typography>
 
         </Box>
@@ -198,7 +198,7 @@ export function AdminTags() {
         }}
       >
         {loading ? (
-          <Loading text="加载标签中..." />
+          <Loading text="加载分类中..." />
         ) : (
           <Fade in timeout={400}>
             {isMobileAdmin ? (
@@ -282,7 +282,7 @@ export function AdminTags() {
             {tags.length === 0 && (
               <Grid item xs={12}>
                 <Box sx={{ textAlign: 'center', py: 4, color: 'text.secondary' }}>
-                  暂无标签，点击右上角新建
+                  暂无分类，点击右上角新建
                 </Box>
 
               </Grid>
@@ -295,7 +295,7 @@ export function AdminTags() {
             <Table size="small">
               <TableHead>
                 <TableRow>
-                  <TableCell>标签名</TableCell>
+                  <TableCell>分类名</TableCell>
 
                   <TableCell>Slug</TableCell>
 
@@ -373,7 +373,7 @@ export function AdminTags() {
                 {tags.length === 0 && (
                   <TableRow>
                     <TableCell colSpan={5} align="center" sx={{ py: 4, color: 'text.secondary' }}>
-                      暂无标签，点击右上角新建
+                      暂无分类，点击右上角新建
                     </TableCell>
 
                   </TableRow>
@@ -414,7 +414,7 @@ export function AdminTags() {
 
       {}
       <Dialog open={open} onClose={handleClose} maxWidth="sm" fullWidth TransitionComponent={Grow} BackdropProps={{ 'aria-hidden': false }}>
-        <DialogTitle>{editingId ? '编辑标签' : '新建标签'}</DialogTitle>
+        <DialogTitle>{editingId ? '编辑分类' : '新建分类'}</DialogTitle>
 
         <DialogContent dividers>
           <Stack spacing={2}>
@@ -425,7 +425,7 @@ export function AdminTags() {
 
             )}
             <TextField
-              label="标签名"
+              label="分类名"
               value={form.name}
               onChange={(e) => setForm((prev) => ({ ...prev, name: e.target.value }))}
               fullWidth

@@ -74,7 +74,7 @@ const GROUPS: { title: string; desc: string; items: SpacingItem[] }[] = [
   },
   {
     title: '帖子列表',
-    desc: '首页 / 标签页 / 搜索结果页的帖子卡片排列。',
+    desc: '首页 / 分类页 / 搜索结果页的帖子卡片排列。',
     items: [
       {
         key: 'postListGap',

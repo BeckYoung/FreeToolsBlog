@@ -443,7 +443,7 @@ export function AdminPosts() {
       const newTag: AdminTag = { id: result.id, name, slug: slugifyTag(name) };
       setTags((prev) => [...prev, newTag]);
       setForm((prev) => ({ ...prev, tagIds: [...prev.tagIds, result.id!] }));
-      enqueueSnackbar('标签创建成功', { variant: 'success' });
+      enqueueSnackbar('分类创建成功', { variant: 'success' });
     }
     handleCloseAddTagDialog();
   };
@@ -1133,7 +1133,7 @@ export function AdminPosts() {
               )}
               <Box>
                 <Typography variant="caption" color="text.secondary" sx={{ mb: 0.5, display: 'block' }}>
-                  标签
+                  分类
                 </Typography>
 
                 <Stack direction="row" spacing={0.5} sx={{ flexWrap: 'wrap', gap: 0.5 }}>
@@ -1384,13 +1384,13 @@ export function AdminPosts() {
               placeholder="留空将自动生成"
             />
             <FormControl sx={{ flex: 1, minWidth: { xs: '100%', sm: 240 } }}>
-              <InputLabel id="tags-label">标签</InputLabel>
+              <InputLabel id="tags-label">分类</InputLabel>
 
               <Select
                 labelId="tags-label"
                 multiple
                 value={form.tagIds}
-                label="标签"
+                label="分类"
                 onChange={(e) => {
                   const value = typeof e.target.value === 'string' ? [] : (e.target.value as (number | string)[]);
                   if (value.includes('__add_new_tag__')) {
@@ -1419,7 +1419,7 @@ export function AdminPosts() {
                 {tags.length > 0 && <Box component="li" sx={{ borderTop: '1px solid', borderColor: 'divider', my: 0.5 }} />}
                 <MenuItem value="__add_new_tag__" sx={{ color: 'primary.main', fontWeight: 600 }}>
                   <Add fontSize="small" sx={{ mr: 1 }} />
-                  添加新标签
+                  添加新分类
                 </MenuItem>
 
               </Select>
@@ -2005,7 +2005,7 @@ export function AdminPosts() {
                     ))}
                     {(!post.tags || post.tags.length === 0) && (
                       <Typography variant="caption" color="text.secondary">
-                        无标签
+                        无分类
                       </Typography>
 
                     )}
@@ -2071,7 +2071,7 @@ export function AdminPosts() {
 
                 <TableCell>状态</TableCell>
 
-                <TableCell>标签</TableCell>
+                <TableCell>分类</TableCell>
 
                 <TableCell>阅读</TableCell>
 
@@ -2251,14 +2251,14 @@ export function AdminPosts() {
         BackdropProps={{ 'aria-hidden': false }}
         sx={{ zIndex: 1400 }}
       >
-        <DialogTitle sx={{ fontWeight: 700 }}>添加新标签</DialogTitle>
+        <DialogTitle sx={{ fontWeight: 700 }}>添加新分类</DialogTitle>
 
         <DialogContent>
           <TextField
             autoFocus
             fullWidth
-            label="标签名称"
-            placeholder="请输入新标签名称"
+            label="分类名称"
+            placeholder="请输入新分类名称"
             value={newTagName}
             onChange={(e) => setNewTagName(e.target.value)}
             onKeyDown={(e) => {

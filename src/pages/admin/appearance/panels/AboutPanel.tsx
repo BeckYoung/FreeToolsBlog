@@ -28,7 +28,7 @@ export function AboutPanel({ editor }: { editor: AppearanceEditor }) {
           rows={4}
         />
         <TextField
-          label="标签（用中文顿号、分隔）"
+          label="分类（用中文顿号、分隔）"
           value={aboutTags}
           onChange={(e) => setAboutTags(e.target.value)}
           fullWidth

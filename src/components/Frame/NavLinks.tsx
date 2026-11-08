@@ -113,7 +113,7 @@ interface MobileNavMenuProps {
 
 const defaultNavItems: NavItemConfig[] = [
   { id: 'nav-home', title: '首页', url: '/', color: '', openInNewTab: false },
-  { id: 'nav-tags', title: '标签', url: '/tag/all', color: '', openInNewTab: false },
+  { id: 'nav-tags', title: '分类', url: '/tag/all', color: '', openInNewTab: false },
   { id: 'nav-message-wall', title: '留言墙', url: '/message-wall', color: '', openInNewTab: false },
   { id: 'nav-chat', title: '聊天室', url: '/chat', color: '', openInNewTab: false },
   { id: 'nav-friends', title: '友链', url: '/friends', color: '', openInNewTab: false },

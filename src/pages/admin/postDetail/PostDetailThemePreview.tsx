@@ -76,7 +76,7 @@ export function PostDetailThemePreview({ post, theme }: PostDetailThemePreviewPr
     excerpt: '',
     cover: '',
     author: 'Xin',
-    tags: [{ id: 'preview', name: '示例标签', slug: 'preview', count: 0 }],
+    tags: [{ id: 'preview', name: '示例分类', slug: 'preview', count: 0 }],
     createdAt: dayjs().format(),
     updatedAt: dayjs().format(),
     readingTime: 3,
@@ -105,7 +105,7 @@ export function PostDetailThemePreview({ post, theme }: PostDetailThemePreviewPr
       </Box>
 
       <Box sx={{ px: 1.5, py: 0.5, borderRadius: '999px', bgcolor: (t) => alpha(t.palette.secondary.main, 0.1) }}>
-        <Typography variant="caption" color="secondary.main" fontWeight={700}># 示例标签</Typography>
+        <Typography variant="caption" color="secondary.main" fontWeight={700}># 示例分类</Typography>
 
       </Box>
 

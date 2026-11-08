@@ -290,7 +290,7 @@ export function Home() {
                   <Search sx={{ color: 'text.secondary', mr: 1.5, fontSize: 22 }} />
                   <InputBase
                     fullWidth
-                    placeholder="搜索文章标题、摘要或标签..."
+                    placeholder="搜索文章标题、摘要或分类..."
                     value={inputValue}
                     onChange={(e) => setInputValue(e.target.value)}
                     inputProps={{ 'aria-label': '搜索文章' }}
@@ -469,7 +469,7 @@ export function Home() {
           {!queryFromUrl && !loading && (
             <Box sx={{ mt: 6 }}>
               <Typography variant="h5" component="h3" sx={{ fontWeight: 700, mb: 2, fontSize: { xs: '1.25rem', sm: '1.5rem' } }}>
-                标签
+                分类
               </Typography>
 
               <Box
@@ -495,7 +495,7 @@ export function Home() {
         <AdminFrameFab adminPath="/admin/posts?compose=1&embed=1" label="写文章" icon={<AddIcon />} onSaved={() => window.location.reload()} />
         <AdminFrameFab adminPath="/admin/comments?embed=1" label="管理评论" icon={<CommentIcon />} bottomOffset={64} onSaved={() => window.location.reload()} />
         <AdminFrameFab adminPath="/admin/media?embed=1" label="管理媒体" icon={<PermMediaIcon />} bottomOffset={128} />
-        <AdminFrameFab adminPath="/admin/tags?embed=1" label="管理标签" icon={<LabelIcon />} bottomOffset={192} />
+        <AdminFrameFab adminPath="/admin/tags?embed=1" label="管理分类" icon={<LabelIcon />} bottomOffset={192} />
       </Box>
 
     </Fade>

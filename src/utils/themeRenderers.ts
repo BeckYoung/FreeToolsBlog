@@ -189,7 +189,7 @@ export const overlayCardRenderer: PostCardRenderer<{
     { key: 'textPosition', label: '文字位置', type: 'select', options: textPositionOptions },
     { key: 'titleSize', label: '标题大小', type: 'select', options: titleSizeOptions },
     { key: 'showExcerpt', label: '显示摘要', type: 'boolean' },
-    { key: 'showTags', label: '显示标签', type: 'boolean' },
+    { key: 'showTags', label: '显示分类', type: 'boolean' },
     { key: 'showMeta', label: '显示阅读时间等元信息', type: 'boolean' },
     { key: 'fillSolidBg', label: '无封面时填充纯色背景', type: 'boolean' },
   ],
@@ -334,7 +334,7 @@ export const cleanCardRenderer: PostCardRenderer<{
     { key: 'borderWidth', label: '边框宽度', type: 'number', min: 0, max: 12, step: 1 },
     { key: 'titleSize', label: '标题大小', type: 'select', options: titleSizeOptions },
     { key: 'showExcerpt', label: '显示摘要', type: 'boolean' },
-    { key: 'showTags', label: '显示标签', type: 'boolean' },
+    { key: 'showTags', label: '显示分类', type: 'boolean' },
     { key: 'showMeta', label: '显示阅读时间等元信息', type: 'boolean' },
   ],
   render: (params, { config, themeColor }) => {
@@ -466,7 +466,7 @@ export const bookCardRenderer: PostCardRenderer<{
     { key: 'coverColor', label: '封面底色', type: 'color' },
     { key: 'textColor', label: '封面文字颜色', type: 'color' },
     { key: 'showExcerpt', label: '显示摘要', type: 'boolean' },
-    { key: 'showTags', label: '显示标签', type: 'boolean' },
+    { key: 'showTags', label: '显示分类', type: 'boolean' },
     { key: 'showMeta', label: '显示阅读时间等元信息', type: 'boolean' },
   ],
   render: (params, { post, config, themeColor }) => {
@@ -592,7 +592,7 @@ export const newsletterCardRenderer: PostCardRenderer<{
     { key: 'cardRadius', label: '卡片圆角', type: 'number', min: 0, max: 32, step: 2 },
     { key: 'borderColor', label: '边框颜色', type: 'color' },
     { key: 'showExcerpt', label: '显示摘要', type: 'boolean' },
-    { key: 'showTags', label: '显示标签', type: 'boolean' },
+    { key: 'showTags', label: '显示分类', type: 'boolean' },
     { key: 'showMeta', label: '显示阅读时间等元信息', type: 'boolean' },
   ],
   render: (params, { themeColor }) => {
@@ -732,7 +732,7 @@ export const glassCardRenderer: PostCardRenderer<{
     { key: 'textPosition', label: '文字位置', type: 'select', options: textPositionOptions },
     { key: 'titleSize', label: '标题大小', type: 'select', options: titleSizeOptions },
     { key: 'showExcerpt', label: '显示摘要', type: 'boolean' },
-    { key: 'showTags', label: '显示标签', type: 'boolean' },
+    { key: 'showTags', label: '显示分类', type: 'boolean' },
     { key: 'showMeta', label: '显示阅读时间等元信息', type: 'boolean' },
   ],
   render: (params, { post, config, themeColor }) => {

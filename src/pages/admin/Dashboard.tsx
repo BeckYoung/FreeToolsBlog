@@ -59,7 +59,7 @@ export function AdminDashboard() {
 
   const stats = [
     { title: '文章总数', value: counts.posts, icon: <Article />, color: 'primary.main', path: '/admin/posts' },
-    { title: '标签总数', value: counts.tags, icon: <Palette />, color: 'secondary.main', path: '/admin/tags' },
+    { title: '分类总数', value: counts.tags, icon: <Palette />, color: 'secondary.main', path: '/admin/tags' },
     { title: '媒体总数', value: counts.media, icon: <PermMedia />, color: 'success.main', path: '/admin/media' },
     { title: '用户总数', value: counts.users, icon: <People />, color: 'warning.main', path: '/admin/users' },
   ];
@@ -296,7 +296,7 @@ export function AdminDashboard() {
           <Box sx={{ display: 'flex', gap: 1.5, flexWrap: 'wrap', minWidth: 0 }}>
             {[
               { label: '前往文章管理', to: '/admin/posts', color: 'primary' },
-              { label: '前往标签管理', to: '/admin/tags', color: 'secondary' },
+              { label: '前往分类管理', to: '/admin/tags', color: 'secondary' },
               { label: '前往媒体管理', to: '/admin/media', color: 'success' },
               { label: '前往用户管理', to: '/admin/users', color: 'warning' },
               { label: '前往评论管理', to: '/admin/comments', color: 'error' },

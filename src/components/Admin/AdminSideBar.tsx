@@ -56,7 +56,7 @@ interface AdminSideBarProps {
 const adminNavItems: NavItem[] = [
   { title: '概览', path: '/admin', icon: <Dashboard fontSize="small" /> },
   { title: '文章', path: '/admin/posts', icon: <Article fontSize="small" /> },
-  { title: '标签', path: '/admin/tags', icon: <Label fontSize="small" /> },
+  { title: '分类', path: '/admin/tags', icon: <Label fontSize="small" /> },
   { title: '媒体管理', path: '/admin/media', icon: <PermMedia fontSize="small" /> },
   { title: '评论管理', path: '/admin/comments', icon: <Chat fontSize="small" /> },
   { title: '留言墙管理', path: '/admin/message-wall', icon: <Forum fontSize="small" /> },
